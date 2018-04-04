@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Produto } from './../model/produto.model';
+import { ServicoService } from './../providers/servico.service';
+import { Component, OnInit, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-lista-produtos',
@@ -7,14 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaProdutosComponent implements OnInit {
 
-  produtos = [
-    {id: '0', nome: 'prod1', valor: 123},
-    {id: '1', nome: 'prod2', valor: 321}
-  ]
+  produtos : Array<Produto> = new Array<Produto>();
+  somaValores: number;
+  id;
+  
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private servico: ServicoService) {
+    this.produtos = this.servico.getProdutos();
   }
 
+  ngOnInit() {
+      
+  }
+
+  getValorSomado(){
+    return this.servico.valor;
+  }
+
+  
 }

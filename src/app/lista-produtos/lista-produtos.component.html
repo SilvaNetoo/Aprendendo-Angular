@@ -1,21 +1,27 @@
 <div class="container">
-  <h2>Tabela de Produtos</h2>
+  <h2 class="titulo"><b>Tabela de Produtos</b></h2>
+  
     <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nome</th>
-          <th>Valor</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody id="tabela-size">
-        <tr *ngFor="let item of produtos" >
-          <td>{{item.id}}</td>
-          <td>{{item.nome}}</td>
-          <td>{{item.valor}}</td>
-          <td><a href="#"><i class="material-icons">delete</i></a></td>
-        </tr>
-      </tbody>
-    </table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Valor</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-size">
+          <tr *ngFor="let item of produtos; let i = index">
+            <td>{{i}}</td>
+            <td>{{item.nome}}</td>
+            <td>{{item.valor}}</td>
+            <td><a href="#"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td> {{ getValorSomado() }} </td>
+          </tr>
+        </tbody>
+      </table>
+
+    
   </div>

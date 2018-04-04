@@ -6,7 +6,7 @@
 .bg-container{
     overflow: hidden;
     width: 100%;
-    height: 794px;
+    min-height: 794px;
     position: absolute;
     top: 0;
     z-index: 0;
@@ -15,14 +15,16 @@
 .bg-container > img{
     margin-left: -6%;
     max-width: 106%;
+    min-height: 1000px;
     margin-top: -10%;
     opacity: 0.5;
-    animation: bounce 15.0s alternate infinite ease-in;
+    animation: bounce 15.0s alternate infinite ease-in-out;
 }
 
+
 .jumbotron{
-    height: 700px;
-    width: 500px;
+    max-height: 700px;
+    max-width: 500px;
     top: 3rem;
     -webkit-box-shadow: 7px 3px 35px 15px #8a8a8a;
     background: linear-gradient(rgba(0, 51, 255, 0.75), #03111dbd );

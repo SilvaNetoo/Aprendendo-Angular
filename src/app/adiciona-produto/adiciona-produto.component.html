@@ -1,13 +1,13 @@
 <form #f="ngForm" (ngSubmit)="onSubmit()">
   <div class="container">
     <br>
-    <h3>Adicionar Novo Produto</h3>
+    <h2><b>Adicionar Novo Produto</b></h2>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-7">
         <input type="text" class="form-control" id="nome" [(ngModel)]="produto.nome" name="nome" placeholder="Nome do produto">
       </div>
-      <div class="col-md-2">
-        <input type="text" class="form-control" id="valor" [(ngModel)]="produto.valor" name="valor" placeholder="Valor">
+      <div class="col-md-3">
+        <input type="number" class="form-control" id="valor" [(ngModel)]="produto.valor" name="valor" placeholder="Valor">
       </div>
       <div class="col-md-2">
         <button id="botao-adicionar" type="submit" >Adicionar</button>

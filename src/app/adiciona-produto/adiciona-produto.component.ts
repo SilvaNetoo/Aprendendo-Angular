@@ -18,6 +18,7 @@ export class AdicionaProdutoComponent implements OnInit {
   
     onSubmit(){
       this.service.adicionaProduto(this.produto);
+      this.produto = new Produto();
     }
 
 }
