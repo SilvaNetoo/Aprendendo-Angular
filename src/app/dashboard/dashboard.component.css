@@ -1,0 +1,12 @@
+.navbar-default {
+    background: rgba(0, 51, 255, 0.75);
+}
+
+#logo-facisa{
+    height: 10%;
+    width: 8%;
+}
+
+#botao-add-nav{
+    color: white;
+}

@@ -1,0 +1,17 @@
+img {
+    width: 3%;
+}
+
+#tabela-size {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1%;
+}
+
+a{
+    color: red;
+}
+
+.table{
+    margin-top: 10%;
+}

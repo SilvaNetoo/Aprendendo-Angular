@@ -1,0 +1,34 @@
+<div class="container-fluid">
+
+  <div class="jumbotron">
+
+    
+    <form #f="ngForm" (ngSubmit)="onSubmit()" id="login" >
+      <div *ngIf="!validator && f.submitted" class="alert alert-danger" role="alert">
+          Login ou Senha inválidos!
+        </div>
+      <div class="logo">
+          <img id="img-logo" src="assets/graphic.svg" alt="">
+          <h1 id="nome-tela">LOGIN</h1>
+        </div>
+        <div class="form-group">
+          <label for="email">Insira seu e-mail:</label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Insira sua senha:</label>
+          <input type="password" class="form-control" [(ngModel)]="user.senha" name="senha">
+        </div>
+        <button id="botao-login" type="submit" class="btn btn-default">Login</button>
+      </form>
+      <a href="#"><p style="text-align: center; color: #fff; margin-top: 8%;">Forgot Password</p></a>
+
+    
+  </div>
+
+  <div class="bg-container">
+    <img src="../assets/cidade-login.jpg" alt="">
+  </div>
+
+</div>
+
